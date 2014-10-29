@@ -45,7 +45,7 @@ Thanks to Sam Nazarko http://www.raspbmc.com/wiki/technical/building-xbmc/
     make -C /tools/rbp/depends/xbmc
     cd installation
     make -jX
-    wget https://github.com/Noahgie/XBMCScripts/blob/master/create_tarball.sh
+    wget https://github.com/XBananaMC/XBananaMC/blob/master/create_tarball.sh
     make install
     sh create_tarball.sh
 
