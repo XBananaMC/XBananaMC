@@ -27,37 +27,37 @@ Build it!
 Thanks to Sam Nazarko http://www.raspbmc.com/wiki/technical/building-xbmc/
 
 #### First we have to update our packages ####
-sudo apt-get update
-sudo apt-get upgrade
+    sudo apt-get update
+    sudo apt-get upgrade
 
 #### Install XBMC to /home/xbmc/installation ####
-mkdir /home/xbmc/
-cd /home/xbmc/
-git clone https://github.com/xbmc/xbmc
-mv xbmc installation
+    mkdir /home/xbmc/
+    cd /home/xbmc/
+    git clone https://github.com/xbmc/xbmc
+    mv xbmc installation
 
 #### Patch XBMC Source ####
-wget http://svn.stmlabs.com/svn/raspbmc/patches/XBMC-hardfp/patch_xbmc.sh
-sh patch_xbmc.sh
+    wget http://svn.stmlabs.com/svn/raspbmc/patches/XBMC-hardfp/patch_xbmc.sh
+    sh patch_xbmc.sh
 
 #### Install XBMC ####
-sh /tools/rbp/setup-sdk.sh
-make -C /tools/rbp/depends/xbmc
-cd installation
-make -jX
-wget https://github.com/Noahgie/XBMCScripts/blob/master/create_tarball.sh
-make install
-sh create_tarball.sh
+    sh /tools/rbp/setup-sdk.sh
+    make -C /tools/rbp/depends/xbmc
+    cd installation
+    make -jX
+    wget https://github.com/Noahgie/XBMCScripts/blob/master/create_tarball.sh
+    make install
+    sh create_tarball.sh
 
 #### Install rPlay for Airplay Mirroring(!) ####
-sudo apt-get install libao-dev avahi-utils libavahi-compat-libdnssd-dev libva-dev youtube-dl
-sudo youtube-dl –update
-sudo apt-get -f install
-wget -O rplay-1.0.1-armhf.deb http://www.vmlite.com/rplay/rplay-1.0.1-armhf.deb
-sudo dpkg -i rplay-1.0.1-armhf.deb
+    sudo apt-get install libao-dev avahi-utils libavahi-compat-libdnssd-dev libva-dev youtube-dl
+    sudo youtube-dl –update
+    sudo apt-get -f install
+    wget -O rplay-1.0.1-armhf.deb http://www.vmlite.com/rplay/rplay-1.0.1-armhf.deb
+    sudo dpkg -i rplay-1.0.1-armhf.deb
 To use rPlay please send an E-Mail to info@vmlite.com and ask for a license key. Add this license key at http://IPdesPi:7100/admin. We are working on an own Settings App where you can add the license key in XBMC.
 
 #### Start XBMC ####
-sudo initctl stop xbmc
-sudo tar -xzf xbmc-rbp*.tar.gz -C /opt
-sudo initctl start xbmc
+    sudo initctl stop xbmc
+    sudo tar -xzf xbmc-rbp*.tar.gz -C /opt
+    sudo initctl start xbmc
