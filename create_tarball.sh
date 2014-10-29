@@ -67,6 +67,9 @@ ln -sf libcurl.so.3 libcurl.so
 ln -sf libdvdcss.so.2.1.0 libdvdcss.so.2
 ln -sf libdvdcss.so.2 libdvdcss.so
 ln -sf libssh2.so.1.0.1 libssh2.so.1
+# install rplay / maybe we make own one
+# have a look at install.sh
+
 # try to get that working for Banana Pi Firmware:
 # wget --no-check-certificate https://github.com/raspberrypi/firmware/tarball/master
 # tar -xzf master
